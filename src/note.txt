@@ -1,0 +1,127 @@
+ {/* <div className="relative">
+                                <div className="absolute inset-y-1 pl-3 left-[-7px] flex items-center pointer-events-none">
+                                  
+                                </div>
+                                
+                            </div> */}
+
+
+
+                            // import { Navigate, Route, Routes } from "react-router-dom"
+// import Navbar from "./components/navbar/Navbar"
+// import SignUp from "./pages/SignUp"
+// import Homepage from "./pages/Homepage"
+// import LogIn from "./pages/LogIn"
+// import Settings from "./pages/Settings"
+// import Profile from "./pages/Profile"
+// import { AuthStore } from "./store/Auth.store"
+// import { useEffect } from "react"
+// import { Loader } from "lucide-react"
+// import LandingPages from "./pages/LandingPages"
+// const App = () => {
+//   const { authUser, checkAuth, isCheckingAuth } = AuthStore()
+
+//   useEffect(() => {
+//     checkAuth()
+
+//   }, [checkAuth])
+
+//   console.log({ authUser })
+
+
+//   if (isCheckingAuth && !authUser) return (<div>
+//     <div className="justify-center items-center flex h-screen bg-black">
+//       <Loader className="size-10 animate-spin" />
+//     </div>
+
+//   </div>)
+
+//   return (
+//     <div className="text-white">
+//       <Navbar />
+
+//       <Routes>
+//         <Route path="/" element={<LandingPages />} />
+//         <Route path="/homepage" element={authUser ? <Homepage /> : <Navigate to="/login" />} />
+
+//         <Route path="/signup" element={!authUser ? <SignUp /> : <Navigate to="/login" />} />
+
+//         {/* <Route path="/signup" element={!authUser ? <SignUp /> : <Navigate to="/homepage" />} /> */}
+
+//         <Route path="/login" element={!authUser ? <LogIn /> : <Navigate to="/homepage" />} />
+//         <Route path="/profile" element={authUser ? <Profile /> : <Navigate to="/login" />} />
+//         <Route path="/settings" element={<Settings />} />
+
+//       </Routes>
+//       {/* <Footer /> */}
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// export const useChatState = create((set, get) => ({
+//     messages: [],
+//     users: [],
+//     selectedUser: null,
+//     isUsersLoading: false,
+//     isMessagesLoading: false,
+
+//     getUsers: async () => {
+//         set({ isUsersLoading: true });
+//         try {
+//             const res = await axiosInstance.get("/messages/users");
+//             set({ users: res.data });
+//         } catch (error) {
+//             toast.error(error.response.data.message);
+//         } finally {
+//             set({ isUsersLoading: false });
+//         }
+//     },
+
+//     getMessages: async (userId) => {
+//         set({ isMessagesLoading: true });
+//         try {
+//             const res = await axiosInstance.get(`/messages/${userId}`);
+//             set({ messages: res.data });
+//         } catch (error) {
+//             toast.error(error.response.data.message);
+//         } finally {
+//             set({ isMessagesLoading: false });
+//         }
+//     },
+//     sendMessage: async (messageData) => {
+//         const { selectedUser, messages } = get();
+//         try {
+//             const res = await axiosInstance.post(`/messages/send/${selectedUser._id}`, messageData);
+//             set({ messages: [...messages, res.data] });
+//         } catch (error) {
+//             toast.error(error.response.data.message);
+//         }
+//     },
+
+//     subscribeToMessages: () => {
+//         const { selectedUser } = get();
+//         if (!selectedUser) return;
+
+//         const socket = AuthStore.getState().socket;
+
+//         socket.on("newMessage", (newMessage) => {
+//             const isMessageSentFromSelectedUser = newMessage.senderId === selectedUser._id;
+//             if (!isMessageSentFromSelectedUser) return;
+
+//             set({
+//                 messages: [...get().messages, newMessage],
+//             });
+//         });
+//     },
+
+//     unsubscribeFromMessages: () => {
+//         const socket = AuthStore.getState().socket;
+//         socket.off("newMessage");
+//     },
+
+//     setSelectedUser: (selectedUser) => set({ selectedUser }),
+// }));
