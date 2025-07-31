@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import { io } from "socket.io-client";
 import { axiosInstance } from "../lib/api.axios";
 
-const BASE_URL = import.meta.env.MODE === "development" ? "http://localhost:5000" : "/";
+const BASE_URL = import.meta.env.MODE === "development" ? "https://purslsechatback.onrender.com" : "/";
 
 export const AuthStore = create((set, get) => ({
     authUser: null,
