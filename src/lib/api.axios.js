@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-    baseURL: "http://localhost:1900/api",
+    baseURL: "https://pulsechatback.onrender.com/api",
     withCredentials: true
 }) 
